@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>다른 페이지를 가져오는 iframe</title>
+</head>
+<body>
+			<!-- 
+			
+					웹페이지 내에서 다른 웹페이지를 표시 할때 사용 
+					문법 ; <iframe src=:url><iframe>
+							속성 ; width , height , style = "border"
+							target과  name을 이용할 수 도 있음
+			
+			 -->
+			 
+			 <h2> 여기는 ex08_iframes 문서 입니다.</h2>
+			 <p>웹 페이지 내에서 다른 웹페이지를 표시할 때 사용</p>
+			 <p> <iframe src="ex02_ul_menu.html"></iframe></p>
+			 <hr>
+			
+			 <p> <iframe src="ex02_ul_menu.html" width="800"></iframe></p>
+			 <hr>
+			 <p> <iframe src="ex02_ul_menu.html" width="100%" style="border: none"></iframe></p>
+			 <hr>
+			 
+			 <p> <iframe src="ex02_ul_menu.html" width="100%" style="border: none" name="doc04"></iframe></p>
+			 <p><a href="ex04_class.html" target="doc04"> ex04 문서 가져오기</a></p>
+			 <hr>
+			
+</body>
+</html>

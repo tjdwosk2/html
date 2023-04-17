@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Canvas</title>
+</head>
+<body>
+
+<!-- canvas 태그는 웹 페이지에 그래픽을 그리는데 사용  -->
+<!-- 자바 스크립트를 이용해서 ,선,원,사각형,그림 , 글자 로 표현 을 한다 -->
+<canvas id="myCanvas" width="600" height="400 "
+style="border: 1px solid red"></canvas>
+
+<script type="text/javascript">
+// 현재 문서에서 id가 myCanvas 인 태그를 찾아서 변수 c에 저장하자
+ var c = document.getElementById("myCanvas");
+ // 2d 그래픽 처리 할거야 
+ var ctx = c.getContext("2d");
+ 
+// 그리기 시작
+ctx.beginPath();
+//좌표가 10,10 곳으로 이동 
+
+ctx.moveTo(10,10);
+
+// 직선 긋기(끝위치)
+ctx.lineTo(110,10);
+ctx.stroke();
+
+
+
+
+ctx.beginPath();
+ctx.moveTo(110,10);
+ctx.lineTo(110,110);
+ctx.stroke();
+
+
+ctx.moveTo(10,10);
+ctx.lineTo(10,110);
+ctx.stroke();
+
+ctx.moveTo(10,110);
+ctx.lineTo(110,110);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.strokeStyle="#f00";
+ctx.moveTo(10,10);
+ctx.lineTo(110,110);
+ctx.stroke();
+
+ctx.moveTo(10,110);
+ctx.lineTo(110,10);
+ctx.stroke();
+
+/* 사각형 (strokeRect (시작 x ,y,w,h) , fillRect)*/
+  ctx.beginPath();
+  ctx.strokeStyle="#f0f";
+  ctx.strokeRect(120,10,100,100);
+  
+  ctx.beginPath();
+  ctx.strokeStyle="#f0f";
+  ctx.strokeRect(130,20,80,80);
+
+
+  ctx.beginPath();
+  ctx.strokeStyle="skyblue";
+  ctx.strokeRect(140,30,60,60);
+  
+  
+  /* 원 arc(중심좌표 x, y, 반지름 , 시작각도 , 끝각도)*/
+  /* 각도 : Math.PI*2(정원), Math.PI*1(반원) */
+  
+   ctx.beginPath();
+  ctx.strokeStyle="orange";
+  ctx.arc(280,60,50,0, Math.PI*2);
+  ctx.stroke();
+  
+  ctx.beginPath();
+  ctx.fillStyle="skyblue";
+  ctx.arc(280,60,40,0, Math.PI*2);
+  ctx.fill();
+  
+  
+  ctx.beginPath();
+  ctx.fillStyle="magenta";
+  ctx.arc(280,60,30,0, Math.PI*1);
+  ctx.fill();
+  
+  ctx.beginPath();
+  ctx.fillStyle="#ff0";
+  ctx.arc(280,60,20, Math.PI*1, 0);
+  ctx.fill();
+  
+  
+  // 글자 (text, 시작위치) 글자의 밑이 기준열이다.
+   ctx.beginPath();
+   ctx.font = "50px 궁서체"
+   ctx.strokeText("Hello World",10,210)
+   
+   
+   ctx.beginPath();
+   ctx.fillStyle="#0ff";
+   ctx.font = "50px 궁서체"
+   ctx.fillText("Hello World",10,310)
+ 
+  
+  
+</script>
+
+
+
+</body>
+</html>

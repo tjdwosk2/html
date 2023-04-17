@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>table - 합치기</title>
+<style type="text/css">
+table {
+	width: 40%;
+	margin: auto;
+}
+
+table, th, td {
+	border: 3px solid green;
+}
+
+td {
+	text-align: center;
+}
+</style>
+</head>
+<body>
+
+	<!--  행합치기 : rowspan = "합쳐진 숫자"
+		합치기는 상단이 살아 남아서 합치기를 한다
+		
+		열 합치기 : colspan = "합쳐진 숫자"
+		합치기는 왼쪽이 살아남아서 합치기를 한다
+ -->
+	<table>
+		<caption>
+			<h2>인재개발원 숙소</h2>
+		</caption>
+		<thead>
+			<tr>
+				<th>방이름</th>
+				<th>대상</th>
+				<th>크기</th>
+				<th>방이름가격</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>유채방</td>
+				<td>여성</td>
+				<td rowspan="3">4인실</td>
+				<td rowspan="4">1인20.000원</td>
+			</tr>
+			<tr>
+				<td rowspan="2">동백방</td>
+				<td>동성</td>
+			</tr>
+			<tr>
+				<td>가족</td>
+			</tr>
+			<tr>
+				<td>천혜향방</td>
+				<td>누구나</td>
+				<td>2인실</td>
+			</tr>
+		</tbody>
+		<tfoot>
+		
+		<tr>
+		<td colspan="4" style="text-align: left; padding-left: 10px"><sup>**</sup>3세까지는 무료</td>
+	
+		</tr>
+		
+		</tfoot>
+
+
+	</table>
+	<hr>
+	
+	<table>
+	<thead>
+
+	<tr><th colspan="3">2022</th></tr>
+	
+	</thead>
+	<tbody>
+	
+	<tr><td>1</td><td>2</td><td>3</td></tr>
+	<tr><td rowspan="2" colspan="2";>4</td><td>6</td></tr>
+	<tr>                                             <td>9</td></tr>
+	<tr><td>10</td><td>11</td><td>12</td></tr>
+	
+	</tbody>
+	
+	
+	
+	
+	
+	
+	</table>
+
+</body>
+</html>

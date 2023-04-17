@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Video, Audio</title>
+</head>
+<body>
+<!--                              
+
+					속성 : controls : 컨트롤러 보이게 하기
+							 autoplay : 자동실행
+							 loop   	  : 반복실행
+							 muted  	  : 음소거 ,autoplay 같이 사용하면 자동실행됨
+
+ -->
+ <video src="../multi/mov_bbb.mp4" controls autoplay muted></video>
+ <hr>
+ 
+ <video  width= 100  height= 100; controls autoplay muted >
+ 
+ <source src="../multi/mov_bbb.mp4">
+ </video>
+ 
+ <hr>
+ 
+ <audio src="../multi/All.mp3" controls autoplay></audio>
+ <hr>
+ 
+ 
+ <audio controls="controls" autoplay="autoplay">
+ 			<source src="../multi/All.mp3">
+ </audio>
+ 
+ <!-- YouTube  -->
+ <iframe width="420" height="315"
+ 	src="https://www.youtube.com/embed/tgbNymZ7vqY"> </iframe>
+ 	
+ <!-- 자동재생 -->
+ <iframe width="420" height="315"
+ 	src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1"> </iframe>
+ 	
+ <!-- 무한 재생 -->
+ <iframe width="420" height="315"
+ 	src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1&loop=1"> </iframe>
+ 
+ 
+
+		 
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Javascript</title>
+
+<script type="text/javascript">
+		function img_off() {
+			document.getElementById('img').src="../images/pic_bulboff.gif";
+			
+		}
+		function img_on() {
+			document.getElementById('img').src="../images/pic_bulbon.gif";
+			
+		}
+</script>
+</head>
+<body>
+
+
+<!--
+
+			javascript 는 <script> 태그에서 정의하고 있다 
+			head태그 와 body 태그에 모두 사용 가능하다
+			
+			태그 속성 중 onXXX()속성은 javascript 의  function() 를 호출하는 것이다.
+			 javascript 의  function() = java의 메서드와 비슷하다 
+			
+  -->
+  
+  			<h2> 자바 스크립트 사용</h2>
+  			<p> 자바 스크립트를 활용한 html 텍스트 넣기</p>
+  			<hr>
+  			<p id="memo"></p>
+  			
+  			
+  			<p class="memo2"></p>
+  			<p class="memo2"></p>
+  			<p class="memo2"></p>
+  			<p class="memo2"></p>
+  			
+			<hr>
+			<script type="text/javascript">
+			document.getElementById("memo").innerHTML = "Hello JavaScript";
+			
+			</script>	
+			
+			<h2 id ="memo3">시간 표시 영역</h2>
+			<script type="text/javascript">
+				document.getElementById("memo3").innerHTML = Date();
+
+			</script>
+			
+			<h2 id ="memo3">이미지 변경 </h2>
+			<img id="img" src="../images/pic_bulboff.gif"> 
+			<br>
+			<!-- onXXX 속성이면 자바스크립트는 head 안에 스크립트를 만든다.  -->
+			<!-- onXXX =" 자바스크립트 함수이름" 함수가 호출된다.  -->
+			
+			<button onclick="img_off()""> 끄기</button>
+			<button onclick="img_on()"> 켜기</button>
+		
+			<hr>
+			
+		
+			<img id="img2" src="../images/pic_bulboff.gif"> <br>
+			<!-- onXXX 속성이면 자바스크립트는 head 안에 스크립트를 만든다.  -->
+			<!-- onXXX =" 자바스크립트 직접이름 " 함수가 호출된다.  -->
+			
+		
+			<button onclick="document.getElementById('img2').src='../images/pic_bulboff.gif'"> 끄기</button>
+			<button onclick="document.getElementById('img2').src='../images/pic_bulbon.gif'"> 켜기</button>
+			
+</body>
+</html>
